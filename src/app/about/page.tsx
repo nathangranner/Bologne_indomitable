@@ -7,7 +7,24 @@ export default function AboutPage() {
         <div className="min-h-screen bg-black text-white pt-24 px-6 md:px-12 pb-20 font-serif leading-relaxed flex items-center justify-center">
             <article className="max-w-4xl mx-auto space-y-16 text-center">
 
-                {/* PVC Logo */}
+                {/* Special Consideration Header & Logo */}
+                <div className="space-y-8 mb-12">
+                    <h1 className="text-4xl md:text-5xl font-bold text-yellow-500 mb-4 drop-shadow-xl">Special Consideration</h1>
+                    <div className="h-1 w-16 bg-yellow-600/50 rounded-full mx-auto"></div>
+
+                    <div className="flex justify-center mt-8">
+                        {/* Increased size by ~20%: w-80 (20rem) / h-40 (10rem) -> md:w-96 (24rem) / md:h-48 (12rem) */}
+                        <div className="relative w-80 h-40 md:w-96 md:h-48">
+                            <Image
+                                src="/assets_import/pvc_logo_new.jpeg"
+                                alt="Pasadena Vocal Competition Logo"
+                                fill
+                                className="object-contain mix-blend-screen" // Blends black background seamlessly
+                                priority
+                            />
+                        </div>
+                    </div>
+                </div>
 
 
                 {/* Award Text Section */}
@@ -40,18 +57,7 @@ export default function AboutPage() {
                         The Chevalier Award honors the artists who make that emergence possible — and in doing so, allow opera’s enduring truths to be heard again with greater clarity and room for many more stories.
                     </p>
 
-                    {/* PVC Logo */}
-                    <div className="flex justify-center py-8">
-                        <div className="relative w-64 h-32 md:w-80 md:h-40">
-                            <Image
-                                src="/assets_import/pvc_logo.png"
-                                alt="Pasadena Vocal Competition Logo"
-                                fill
-                                className="object-contain filter invert opacity-90"
-                                priority
-                            />
-                        </div>
-                    </div>
+
 
                     <div className="py-8 text-center space-y-4">
                         <p className="text-xl md:text-2xl text-yellow-500 font-medium">
@@ -81,9 +87,30 @@ export default function AboutPage() {
                         The special project was designed by <strong className="text-white">Nathan Granner</strong> and <strong className="text-white">A Lab Studios</strong>.
                     </p>
 
-                    <p className="text-lg">
-                        The opening song <em>Depuis Longtemps</em> is from the album <a href="https://www.pentatonemusic.com/product/ombre-di-luce/" target="_blank" rel="noopener noreferrer" className="text-yellow-500 hover:text-yellow-400 underline underline-offset-4 transition-colors">Ombre di Luce</a> courtesy of <strong>Pentatone Music</strong>.
-                    </p>
+                    {/* Combined Ombre di Luce Credit with Inline Image */}
+                    <div className="flex flex-col md:flex-row items-center justify-center gap-8 pt-4">
+                        {/* Image on the Left */}
+                        <a href="https://www.pentatonemusic.com/product/ombre-di-luce/" target="_blank" rel="noopener noreferrer" className="block relative w-32 h-32 md:w-40 md:h-40 flex-shrink-0 transition-transform hover:scale-105 duration-300 shadow-2xl">
+                            <Image
+                                src="/assets_import/ombre_di_luce_cover.jpg"
+                                alt="Ombre di Luce Album Cover"
+                                fill
+                                className="object-cover rounded-md"
+                            />
+                        </a>
+
+                        {/* Text on the Right */}
+                        <div className="flex-1 text-center md:text-left space-y-2">
+                            <p className="text-lg">
+                                The opening song <em>Depuis Longtemps</em> is from the album <a href="https://www.pentatonemusic.com/product/ombre-di-luce/" target="_blank" rel="noopener noreferrer" className="text-yellow-500 hover:text-yellow-400 underline underline-offset-4 transition-colors">Ombre di Luce</a> courtesy of <strong>Pentatone Music</strong>.
+                            </p>
+                            <p className="text-sm text-gray-400 uppercase tracking-wider leading-relaxed">
+                                Nathan Granner, <span className="text-gray-500 font-light">Tenor</span><br />
+                                Clélia Cafiero, <span className="text-gray-500 font-light">Conductor</span><br />
+                                Orchestre Philharmonique de Marseille
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </article>
         </div>
