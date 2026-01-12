@@ -18,14 +18,14 @@ export function Navigation() {
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
+              <Link href="/podcast" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                Listen to the Podcast
+              </Link>
               <Link href="/" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 The Story
               </Link>
               <Link href="/storybook" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Storybook
-              </Link>
-              <Link href="/podcast" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                Podcast
               </Link>
               <Link href="/about" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 About
@@ -46,14 +46,14 @@ export function Navigation() {
       {isOpen && (
         <div className="md:hidden bg-black/90 backdrop-blur-xl">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <Link href="/podcast" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+              Listen to the Podcast
+            </Link>
             <Link href="/" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
               The Story
             </Link>
             <Link href="/storybook" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
               Storybook
-            </Link>
-            <Link href="/podcast" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-              Podcast
             </Link>
             <Link href="/about" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
               About
